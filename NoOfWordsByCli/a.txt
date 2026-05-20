@@ -1,0 +1,62 @@
+split(' ')
+
+splits on exactly one space character.
+so,
+hello     world
+
+and inspect:
+
+console.log(words)
+
+You’ll probably see something like:
+
+['hello', '', '', '', 'world']
+
+Instead of:
+
+split(' ')
+
+you can pass a pattern:
+
+split(/\s+/)
+
+Now let’s decode it slowly.
+
+/ /
+
+means:
+
+this is a regex pattern
+
+\s
+
+means:
+
+whitespace
+(space, tab, newline)
+
++
+
+means:
+
+one or more
+
+So:
+
+split(/\s+/)
+
+means:
+
+split wherever one or more whitespace characters appear
+
+Now:
+
+hello     world
+
+becomes:
+
+["hello", "world"]
+
+instead of:
+
+["hello", "", "", "", "world"]
